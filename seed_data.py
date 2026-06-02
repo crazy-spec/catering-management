@@ -21,6 +21,10 @@ auditoriums = [
     {"name": "Rose Auditorium", "type": "Auditorium", "latitude": 10.6501, "longitude": 76.0503},
     {"name": "Arabian Palace Convention Centre", "type": "Convention Centre", "latitude": 10.6405, "longitude": 76.0602},
 
+    # Changramkulam / Perumpilav area
+    {"name": "Changramkulam Town Hall", "type": "Auditorium", "latitude": 10.8100, "longitude": 75.9800},
+    {"name": "Perumpilav Convention Hall", "type": "Auditorium", "latitude": 10.7200, "longitude": 76.0300},
+
     # Surrounding towns/villages for expense calculations
     {"name": "Edappal Town", "type": "Place", "latitude": 10.8280, "longitude": 75.9900},
     {"name": "Kunnamkulam Town", "type": "Place", "latitude": 10.6500, "longitude": 76.0700},
