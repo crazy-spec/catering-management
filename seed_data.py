@@ -2,7 +2,7 @@ from models import db, Location
 from app import app
 
 auditoriums = [
-    # Edappal auditoriums
+    # --- Edappal Auditoriums ---
     {"name": "Shifa Convention Center", "type": "Auditorium", "latitude": 10.8283, "longitude": 75.9951},
     {"name": "Rozia International Convention Centre", "type": "Convention Centre", "latitude": 10.8302, "longitude": 75.9904},
     {"name": "Bianco Castle", "type": "Auditorium", "latitude": 10.8325, "longitude": 75.9887},
@@ -17,19 +17,25 @@ auditoriums = [
     {"name": "Peeyem Auditorium", "type": "Auditorium", "latitude": 10.8210, "longitude": 75.9890},
     {"name": "Pullat Convention Centre", "type": "Convention Centre", "latitude": 10.8230, "longitude": 75.9870},
 
-    # Kunnamkulam auditoriums
+    # --- Kunnamkulam Auditoriums ---
     {"name": "Rose Auditorium", "type": "Auditorium", "latitude": 10.6501, "longitude": 76.0503},
     {"name": "Arabian Palace Convention Centre", "type": "Convention Centre", "latitude": 10.6405, "longitude": 76.0602},
 
-    # Changramkulam / Perumpilav auditoriums
+    # --- Changramkulam / Perumpilav Auditoriums ---
     {"name": "Changramkulam Town Hall", "type": "Auditorium", "latitude": 10.8100, "longitude": 75.9800},
     {"name": "Perumpilav Convention Hall", "type": "Auditorium", "latitude": 10.7200, "longitude": 76.0300},
 
-    # Surrounding towns/villages for expense calculations
+    # --- Key Towns/Villages (for staff hometowns & expense calc) ---
     {"name": "Edappal Town", "type": "Place", "latitude": 10.8280, "longitude": 75.9900},
     {"name": "Kunnamkulam Town", "type": "Place", "latitude": 10.6500, "longitude": 76.0700},
     {"name": "Changramkulam", "type": "Place", "latitude": 10.8100, "longitude": 75.9800},
-    {"name": "Perumpilav", "type": "Place", "latitude": 10.7200, "longitude": 76.0300}
+    {"name": "Perumpilav", "type": "Place", "latitude": 10.7200, "longitude": 76.0300},
+    {"name": "Thrissur", "type": "Place", "latitude": 10.5276, "longitude": 76.2144},
+    {"name": "Kozhikode", "type": "Place", "latitude": 11.2588, "longitude": 75.7804},
+    {"name": "Ponnani", "type": "Place", "latitude": 10.7666, "longitude": 75.9259},
+    {"name": "Valanchery", "type": "Place", "latitude": 10.8790, "longitude": 76.0500},
+    {"name": "Kottakkal", "type": "Place", "latitude": 10.9940, "longitude": 76.0050},
+    {"name": "Tirur", "type": "Place", "latitude": 10.9000, "longitude": 75.9200}
 ]
 
 with app.app_context():
