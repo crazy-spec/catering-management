@@ -14,7 +14,7 @@ class Staff(db.Model):
 class Location(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100))
-    type = db.Column(db.String(50))  # Auditorium, Home, Area
+    type = db.Column(db.String(50))
     latitude = db.Column(db.Float)
     longitude = db.Column(db.Float)
 
@@ -23,7 +23,7 @@ class Event(db.Model):
     name = db.Column(db.String(100))
     location_id = db.Column(db.Integer, db.ForeignKey('location.id'))
     rate_per_km = db.Column(db.Float, default=2.5)
-    expense_type = db.Column(db.String(20))  # "home_to_site" or "site_to_site"
+    expense_type = db.Column(db.String(20))
 
 class WorkAssignment(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -39,4 +39,3 @@ class Outsourcing(db.Model):
     provider_name = db.Column(db.String(100))
     staff_count = db.Column(db.Integer)
     details = db.Column(db.Text)
-
