@@ -1,0 +1,52 @@
+import googlemaps
+from datetime import datetime
+from models import db, Location
+from app import app
+
+# 1. Put your Google Maps API key here
+API_KEY = "YOUR_GOOGLE_MAPS_API_KEY"
+gmaps = googlemaps.Client(key=API_KEY)
+
+# 2. Define your center point (Edappal coordinates) and radius (30 km)
+CENTER = (10.8283, 75.9951)  # Edappal
+RADIUS = 30000  # in meters
+
+# 3. Place types to fetch
+PLACE_TYPES = [
+    "establishment",  # covers auditoriums, halls, convention centres
+    "locality",       # towns/villages
+]
+
+# 4. Keywords to refine search
+KEYWORDS = [
+    "auditorium", "hall", "convention centre", "marriage hall",
+    "community hall", "town hall", "village"
+]
+
+def fetch_places():
+    results = []
+    for keyword in KEYWORDS:
+        places = gmaps.places_nearby(
+            location=CENTER,
+            radius=RADIUS,
+            keyword=keyword
+        )
+        results.extend(places.get("results", []))
+    return results
+
+def seed_database():
+    places = fetch_places()
+    with app.app_context():
+        db.create_all()
+        for p in places:
+            name = p["name"]
+            lat = p["geometry"]["location"]["lat"]
+            lng = p["geometry"]["location"]["lng"]
+            loc_type = "Auditorium" if any(k in name.lower() for k in ["auditorium","hall","convention"]) else "Place"
+            loc = Location(name=name, type=loc_type, latitude=lat, longitude=lng)
+            db.session.add(loc)
+        db.session.commit()
+        print(f"Seeded {len(places)} locations successfully!")
+
+if __name__ == "__main__":
+    seed_database()
