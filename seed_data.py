@@ -30,7 +30,6 @@ auditoriums = [
     {"name": "Kunnamkulam Town", "type": "Place", "latitude": 10.6500, "longitude": 76.0700},
     {"name": "Changramkulam", "type": "Place", "latitude": 10.8100, "longitude": 75.9800},
     {"name": "Perumpilav", "type": "Place", "latitude": 10.7200, "longitude": 76.0300}
-    # … plus every other hall and locality within 30 km
 ]
 
 with app.app_context():
