@@ -2,22 +2,26 @@ from models import db, Location
 from app import app
 
 auditoriums = [
-    {"name": "Shifa Convention Center", "type": "Auditorium", "latitude": 10.828, "longitude": 75.995},
-    {"name": "Rozia International Convention Centre", "type": "Convention Centre", "latitude": 10.830, "longitude": 75.990},
-    {"name": "Bianco Castle", "type": "Auditorium", "latitude": 10.832, "longitude": 75.988},
-    {"name": "Crown Convention Center", "type": "Auditorium", "latitude": 10.835, "longitude": 75.992},
-    {"name": "Modern Auditorium", "type": "Auditorium", "latitude": 10.829, "longitude": 75.997},
-    {"name": "Zubaida Park Auditorium", "type": "Auditorium", "latitude": 10.827, "longitude": 75.993},
-    {"name": "Taj Convention Centre", "type": "Auditorium", "latitude": 10.826, "longitude": 75.991},
-    {"name": "Airport Garden Auditorium", "type": "Convention Hall", "latitude": 10.850, "longitude": 75.980},
-    {"name": "Rose Auditorium", "type": "Auditorium", "latitude": 10.650, "longitude": 76.050},
-    {"name": "Arabian Palace Convention Centre", "type": "Convention Centre", "latitude": 10.640, "longitude": 76.060},
-    {"name": "Kalachalil Auditorium", "type": "Auditorium", "latitude": 10.820, "longitude": 75.985},
-    {"name": "Sofia Lounge", "type": "Auditorium", "latitude": 10.825, "longitude": 75.994},
-    {"name": "Qatar Auditorium", "type": "Auditorium", "latitude": 10.824, "longitude": 75.996},
-    {"name": "Diamond Auditorium", "type": "Auditorium", "latitude": 10.822, "longitude": 75.992},
-    {"name": "Peeyem Auditorium", "type": "Auditorium", "latitude": 10.821, "longitude": 75.989},
-    {"name": "Pullat Convention Centre", "type": "Convention Centre", "latitude": 10.823, "longitude": 75.987}
+    {"name": "Shifa Convention Center", "type": "Auditorium", "latitude": 10.8283, "longitude": 75.9951},
+    {"name": "Rozia International Convention Centre", "type": "Convention Centre", "latitude": 10.8302, "longitude": 75.9904},
+    {"name": "Bianco Castle", "type": "Auditorium", "latitude": 10.8325, "longitude": 75.9887},
+    {"name": "Crown Convention Center", "type": "Auditorium", "latitude": 10.8350, "longitude": 75.9922},
+    {"name": "Modern Auditorium", "type": "Auditorium", "latitude": 10.8299, "longitude": 75.9970},
+    {"name": "Zubaida Park Auditorium", "type": "Auditorium", "latitude": 10.8277, "longitude": 75.9933},
+    {"name": "Taj Convention Centre", "type": "Auditorium", "latitude": 10.8264, "longitude": 75.9918},
+    {"name": "Rose Auditorium", "type": "Auditorium", "latitude": 10.6501, "longitude": 76.0503},
+    {"name": "Arabian Palace Convention Centre", "type": "Convention Centre", "latitude": 10.6405, "longitude": 76.0602},
+    {"name": "Kalachalil Auditorium", "type": "Auditorium", "latitude": 10.8200, "longitude": 75.9850},
+    {"name": "Sofia Lounge", "type": "Auditorium", "latitude": 10.8250, "longitude": 75.9940},
+    {"name": "Qatar Auditorium", "type": "Auditorium", "latitude": 10.8240, "longitude": 75.9960},
+    {"name": "Diamond Auditorium", "type": "Auditorium", "latitude": 10.8220, "longitude": 75.9920},
+    {"name": "Peeyem Auditorium", "type": "Auditorium", "latitude": 10.8210, "longitude": 75.9890},
+    {"name": "Pullat Convention Centre", "type": "Convention Centre", "latitude": 10.8230, "longitude": 75.9870},
+    # Surrounding places for expense calculations
+    {"name": "Edappal Town", "type": "Place", "latitude": 10.8280, "longitude": 75.9900},
+    {"name": "Kunnamkulam Town", "type": "Place", "latitude": 10.6500, "longitude": 76.0700},
+    {"name": "Changramkulam", "type": "Place", "latitude": 10.8100, "longitude": 75.9800},
+    {"name": "Perumpilav", "type": "Place", "latitude": 10.7200, "longitude": 76.0300}
 ]
 
 with app.app_context():
@@ -26,4 +30,4 @@ with app.app_context():
         loc = Location(name=a["name"], type=a["type"], latitude=a["latitude"], longitude=a["longitude"])
         db.session.add(loc)
     db.session.commit()
-    print("All auditoriums seeded successfully!")
+    print("All auditoriums and places seeded successfully!")
