@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Catering Management</title>
+</head>
+<body>
+    <h1>Catering Staff Management</h1>
+
+    <h2>Staff</h2>
+    <ul>
+        {% for s in staff %}
+            <li>{{ s.name }} - {{ s.hometown }} - {{ s.category }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Events</h2>
+    <ul>
+        {% for e in events %}
+            <li>{{ e.name }} - Rate: {{ e.rate_per_km }} per km</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
