@@ -2,7 +2,7 @@ from models import db, Location
 from app import app
 
 auditoriums = [
-    # Edappal area
+    # Edappal auditoriums
     {"name": "Shifa Convention Center", "type": "Auditorium", "latitude": 10.8283, "longitude": 75.9951},
     {"name": "Rozia International Convention Centre", "type": "Convention Centre", "latitude": 10.8302, "longitude": 75.9904},
     {"name": "Bianco Castle", "type": "Auditorium", "latitude": 10.8325, "longitude": 75.9887},
@@ -17,11 +17,11 @@ auditoriums = [
     {"name": "Peeyem Auditorium", "type": "Auditorium", "latitude": 10.8210, "longitude": 75.9890},
     {"name": "Pullat Convention Centre", "type": "Convention Centre", "latitude": 10.8230, "longitude": 75.9870},
 
-    # Kunnamkulam area
+    # Kunnamkulam auditoriums
     {"name": "Rose Auditorium", "type": "Auditorium", "latitude": 10.6501, "longitude": 76.0503},
     {"name": "Arabian Palace Convention Centre", "type": "Convention Centre", "latitude": 10.6405, "longitude": 76.0602},
 
-    # Changramkulam / Perumpilav area
+    # Changramkulam / Perumpilav auditoriums
     {"name": "Changramkulam Town Hall", "type": "Auditorium", "latitude": 10.8100, "longitude": 75.9800},
     {"name": "Perumpilav Convention Hall", "type": "Auditorium", "latitude": 10.7200, "longitude": 76.0300},
 
