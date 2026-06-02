@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Report</title>
+</head>
+<body>
+    <h1>Monthly Event Report</h1>
+    <table border="1">
+        <tr>
+            <th>Event</th>
+            <th>Total Works</th>
+            <th>Reception</th>
+            <th>Lunch</th>
+            <th>Work Fund</th>
+            <th>Travel Expense</th>
+            <th>Extras</th>
+            <th>Grand Total</th>
+        </tr>
+        {% for r in report_data %}
+        <tr>
+            <td>{{ r.event }}</td>
+            <td>{{ r.total_works }}</td>
+            <td>{{ r.reception }}</td>
+            <td>{{ r.lunch }}</td>
+            <td>{{ r.fund }}</td>
+            <td>{{ r.travel }}</td>
+            <td>{{ r.extras }}</td>
+            <td>{{ r.grand_total }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
