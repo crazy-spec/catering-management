@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template_string, request
 from models import db, Staff, Location, Event, WorkAssignment
 import math
 
@@ -6,9 +6,9 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///catering.db'
 db.init_app(app)
 
-# Distance calculation (simple haversine formula)
+# Distance calculation (Haversine formula)
 def calculate_distance(lat1, lon1, lat2, lon2):
-    R = 6371  # Earth radius in km
+    R = 6371
     dlat = math.radians(lat2 - lat1)
     dlon = math.radians(lon2 - lon1)
     a = math.sin(dlat/2)**2 + math.cos(math.radians(lat1)) * math.cos(math.radians(lat2)) * math.sin(dlon/2)**2
@@ -19,7 +19,7 @@ def calculate_distance(lat1, lon1, lat2, lon2):
 def index():
     staff = Staff.query.all()
     events = Event.query.all()
-    return render_template('index.html', staff=staff, events=events)
+    return render_template_string(open("index.html").read(), staff=staff, events=events)
 
 @app.route('/add_event', methods=['POST'])
 def add_event():
@@ -42,9 +42,8 @@ def assign_work():
     staff = Staff.query.get(staff_id)
     event = Event.query.get(event_id)
     location = Location.query.get(event.location_id)
-
-    # Example: fixed hometown coordinates (expand later)
     hometown = Location.query.filter_by(name=staff.hometown).first()
+
     distance = calculate_distance(hometown.latitude, hometown.longitude, location.latitude, location.longitude)
     travel_expense = distance * event.rate_per_km
 
@@ -53,4 +52,3 @@ def assign_work():
     db.session.commit()
 
     return f"Assigned {staff.name} to {event.name}. Total = {work_fund + travel_expense:.2f} INR"
-
