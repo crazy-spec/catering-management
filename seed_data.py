@@ -138,16 +138,29 @@ def seed_database():
             # … continue until 20+ temples
 
             # Schools
-            {"name": "Edappal Higher Secondary School", "type": "School", "latitude": 10.8287, "longitude": 75.9957},
-            {"name": "Kunnamkulam Govt. High School", "type": "School", "latitude": 10.6504, "longitude": 76.0671},
-            {"name": "Thrissur Model School", "type": "School", "latitude": 10.5278, "longitude": 76.2146},
-            {"name": "Ponnani Public School", "type": "School", "latitude": 10.7836, "longitude": 75.9170},
-            {"name": "Valanchery English School", "type": "School", "latitude": 10.8836, "longitude": 76.0670},
-            {"name": "Palakkad Govt. Victoria College", "type": "School", "latitude": 10.7865, "longitude": 76.6553},
-            {"name": "Ottapalam Higher Secondary School", "type": "School", "latitude": 10.7670, "longitude": 76.3836},
-            {"name": "Shoranur Govt. High School", "type": "School", "latitude": 10.7669, "longitude": 76.2836},
-            {"name": "Chittur Govt. High School", "type": "School", "latitude": 10.7003, "longitude": 76.7503},
-            {"name": "Alathur Govt. High School", "type": "School", "latitude": 10.6502, "longitude": 76.6335},
+                   {"name": "Kottakkal Govt. High School", "type": "School", "latitude": 10.9503, "longitude": 76.0003},
+        {"name": "Parappanangadi Govt. High School", "type": "School", "latitude": 11.0503, "longitude": 75.9171},
+        {"name": "Feroke Govt. High School", "type": "School", "latitude": 11.1836, "longitude": 75.8336},
+        {"name": "Ramanattukara Govt. High School", "type": "School", "latitude": 11.2003, "longitude": 75.8670},
+        {"name": "Kunnamangalam Govt. High School", "type": "School", "latitude": 11.3003, "longitude": 75.8670},
+        {"name": "Perinthalmanna Govt. High School", "type": "School", "latitude": 10.9837, "longitude": 76.2169},
+        {"name": "Cherpulassery Govt. High School", "type": "School", "latitude": 10.8835, "longitude": 76.3169},
+        {"name": "Pattambi Govt. High School", "type": "School", "latitude": 10.8002, "longitude": 76.2002},
+        {"name": "Thrithala Govt. High School", "type": "School", "latitude": 10.7834, "longitude": 76.0834},
+        {"name": "Anakkara Govt. High School", "type": "School", "latitude": 10.7168, "longitude": 76.0334},
+        {"name": "Kumaranellur Govt. High School", "type": "School", "latitude": 10.7501, "longitude": 76.2001},
+        {"name": "Parudur Govt. High School", "type": "School", "latitude": 10.7668, "longitude": 76.1334},
+        {"name": "Thirumittacode Govt. High School", "type": "School", "latitude": 10.7501, "longitude": 76.2834},
+        {"name": "Nagallassery Govt. High School", "type": "School", "latitude": 10.7835, "longitude": 76.1668},
+        {"name": "Kumaramputhur Govt. High School", "type": "School", "latitude": 10.9501, "longitude": 76.4668},
+        {"name": "Karimba Govt. High School", "type": "School", "latitude": 10.9501, "longitude": 76.4001},
+        {"name": "Kottayi Govt. High School", "type": "School", "latitude": 10.7001, "longitude": 76.6334},
+        {"name": "Puthunagaram Govt. High School", "type": "School", "latitude": 10.7001, "longitude": 76.7001},
+        {"name": "Muthalamada Govt. High School", "type": "School", "latitude": 10.5668, "longitude": 76.7501},
+        {"name": "Nemmara Govt. High School", "type": "School", "latitude": 10.5668, "longitude": 76.6834},
+        {"name": "Ayilur Govt. High School", "type": "School", "latitude": 10.5668, "longitude": 76.6501},
+        {"name": "Vadakkanchery Govt. High School", "type": "School", "latitude": 10.6501, "longitude": 76.2668}
+
             # … continue until 15+ schools
         ]
 
