@@ -114,17 +114,27 @@ def seed_database():
         {"name": "Kunnamangalam Masjid", "type": "Mosque", "latitude": 11.3001, "longitude": 75.8668},
             # … continue until 20+ mosques
 
-            # Temples
-            {"name": "Thrissur Vadakkumnathan Temple", "type": "Temple", "latitude": 10.5276, "longitude": 76.2144},
-            {"name": "Kunnamkulam Sree Krishna Temple", "type": "Temple", "latitude": 10.6503, "longitude": 76.0670},
-            {"name": "Edappal Bhagavathi Temple", "type": "Temple", "latitude": 10.8286, "longitude": 75.9956},
-            {"name": "Perumpilav Shiva Temple", "type": "Temple", "latitude": 10.7169, "longitude": 76.0335},
-            {"name": "Guruvayur Temple", "type": "Temple", "latitude": 10.6001, "longitude": 76.0334},
-            {"name": "Kalpathy Vishwanatha Swamy Temple", "type": "Temple", "latitude": 10.7863, "longitude": 76.6551},
-            {"name": "Jainimedu Jain Temple", "type": "Temple", "latitude": 10.7864, "longitude": 76.6552},
-            {"name": "Ottapalam Shiva Temple", "type": "Temple", "latitude": 10.7671, "longitude": 76.3837},
-            {"name": "Shoranur Bhagavathi Temple", "type": "Temple", "latitude": 10.7669, "longitude": 76.2835},
-            {"name": "Chittur Bhagavathi Temple", "type": "Temple", "latitude": 10.7002, "longitude": 76.7502},
+    # Temples
+        {"name": "Thrissur Vadakkumnathan Temple", "type": "Temple", "latitude": 10.5276, "longitude": 76.2144},
+        {"name": "Kunnamkulam Sree Krishna Temple", "type": "Temple", "latitude": 10.6503, "longitude": 76.0670},
+        {"name": "Edappal Bhagavathi Temple", "type": "Temple", "latitude": 10.8286, "longitude": 75.9956},
+        {"name": "Perumpilav Shiva Temple", "type": "Temple", "latitude": 10.7169, "longitude": 76.0335},
+        {"name": "Guruvayur Temple", "type": "Temple", "latitude": 10.6001, "longitude": 76.0334},
+        {"name": "Kalpathy Vishwanatha Swamy Temple", "type": "Temple", "latitude": 10.7863, "longitude": 76.6551},
+        {"name": "Jainimedu Jain Temple", "type": "Temple", "latitude": 10.7864, "longitude": 76.6552},
+        {"name": "Ottapalam Shiva Temple", "type": "Temple", "latitude": 10.7671, "longitude": 76.3837},
+        {"name": "Shoranur Bhagavathi Temple", "type": "Temple", "latitude": 10.7669, "longitude": 76.2835},
+        {"name": "Chittur Bhagavathi Temple", "type": "Temple", "latitude": 10.7002, "longitude": 76.7502},
+        {"name": "Alathur Bhagavathi Temple", "type": "Temple", "latitude": 10.6502, "longitude": 76.6335},
+        {"name": "Mannarkkad Bhagavathi Temple", "type": "Temple", "latitude": 10.9835, "longitude": 76.4669},
+        {"name": "Nilambur Shiva Temple", "type": "Temple", "latitude": 11.2835, "longitude": 76.2335},
+        {"name": "Tirur Bhagavathi Temple", "type": "Temple", "latitude": 10.9169, "longitude": 75.9169},
+        {"name": "Tanur Bhagavathi Temple", "type": "Temple", "latitude": 10.9835, "longitude": 75.8669},
+        {"name": "Kottakkal Shiva Temple", "type": "Temple", "latitude": 10.9502, "longitude": 76.0002},
+        {"name": "Parappanangadi Bhagavathi Temple", "type": "Temple", "latitude": 11.0502, "longitude": 75.9169},
+        {"name": "Feroke Shiva Temple", "type": "Temple", "latitude": 11.1835, "longitude": 75.8335},
+        {"name": "Ramanattukara Bhagavathi Temple", "type": "Temple", "latitude": 11.2002, "longitude": 75.8669},
+        {"name": "Kunnamangalam Shiva Temple", "type": "Temple", "latitude": 11.3002, "longitude": 75.8669},
             # … continue until 20+ temples
 
             # Schools
