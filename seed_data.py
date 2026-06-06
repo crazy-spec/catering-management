@@ -13,12 +13,11 @@ def seed_database():
             {"name": "Changaramkulam", "type": "Village", "latitude": 10.8333, "longitude": 76.0333},
             {"name": "Thrissur", "type": "City", "latitude": 10.5276, "longitude": 76.2144},
             {"name": "Ponnani", "type": "Town", "latitude": 10.7833, "longitude": 75.9167},
-            {"name": "Kozhikode", "type": "City", "latitude": 11.2588, "longitude": 75.7804},
             {"name": "Valanchery", "type": "Town", "latitude": 10.8833, "longitude": 76.0667},
             {"name": "Kuttippuram", "type": "Village", "latitude": 10.8333, "longitude": 76.0667},
             {"name": "Vattamkulam", "type": "Village", "latitude": 10.8167, "longitude": 76.0333},
 
-            # Auditoriums
+            # Auditoriums / Wedding Venues
             {"name": "Shifa Convention Center", "type": "Auditorium", "latitude": 10.8285, "longitude": 75.9955},
             {"name": "Town Hall Kunnamkulam", "type": "Auditorium", "latitude": 10.6502, "longitude": 76.0669},
             {"name": "Perumpilav Auditorium", "type": "Auditorium", "latitude": 10.7168, "longitude": 76.0334},
@@ -36,6 +35,11 @@ def seed_database():
             {"name": "Kunnamkulam Sree Krishna Temple", "type": "Temple", "latitude": 10.6503, "longitude": 76.0670},
             {"name": "Edappal Bhagavathi Temple", "type": "Temple", "latitude": 10.8286, "longitude": 75.9956},
             {"name": "Perumpilav Shiva Temple", "type": "Temple", "latitude": 10.7169, "longitude": 76.0335},
+
+            # Schools
+            {"name": "Edappal Higher Secondary School", "type": "School", "latitude": 10.8287, "longitude": 75.9957},
+            {"name": "Kunnamkulam Govt. High School", "type": "School", "latitude": 10.6504, "longitude": 76.0671},
+            {"name": "Thrissur Model School", "type": "School", "latitude": 10.5278, "longitude": 76.2146},
         ]
 
         for p in places:
