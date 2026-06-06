@@ -1,52 +1,36 @@
-import requests
 from models import db, Location
 from app import app
-
-CENTER_LAT, CENTER_LON = 10.8283, 75.9951  # Edappal
-RADIUS = 30000  # 30 km
-
-# Start with villages only
-queries = {
-    "Villages": f"""
-    [out:json][timeout:60];
-    node["place"="village"](around:{RADIUS},{CENTER_LAT},{CENTER_LON});
-    out body;
-    """
-}
-
-def fetch_places(query):
-    # Use a more reliable Overpass mirror
-    url = "https://overpass.kumi.systems/api/interpreter"
-    response = requests.post(url, data={"data": query})
-    print("Status:", response.status_code)
-    if response.status_code != 200:
-        print("Error from Overpass API:", response.text[:200])
-        return []
-    try:
-        data = response.json()
-        return data.get("elements", [])
-    except Exception as e:
-        print("Failed to parse:", e)
-        print("Raw response:", response.text[:200])
-        return []
 
 def seed_database():
     with app.app_context():
         db.create_all()
-        total = 0
-        for category, q in queries.items():
-            print(f"Fetching {category}...")
-            places = fetch_places(q)
-            for p in places:
-                name = p.get("tags", {}).get("name", "Unnamed Place")
-                lat = p["lat"]
-                lon = p["lon"]
-                loc = Location(name=name, type=category, latitude=lat, longitude=lon)
-                db.session.add(loc)
-            db.session.commit()
-            total += len(places)
-            print(f"Seeded {len(places)} {category} entries.")
-        print(f"✅ Finished seeding. Total entries added: {total}")
+
+        places = [
+            # Villages
+            {"name": "Edappal", "type": "Village", "latitude": 10.8283, "longitude": 75.9951},
+            {"name": "Kunnamkulam", "type": "Town", "latitude": 10.6500, "longitude": 76.0667},
+            {"name": "Perumpilav", "type": "Village", "latitude": 10.7167, "longitude": 76.0333},
+            {"name": "Changaramkulam", "type": "Village", "latitude": 10.8333, "longitude": 76.0333},
+
+            # Auditoriums
+            {"name": "Shifa Convention Center", "type": "Auditorium", "latitude": 10.8285, "longitude": 75.9955},
+            {"name": "Town Hall Kunnamkulam", "type": "Auditorium", "latitude": 10.6502, "longitude": 76.0669},
+
+            # Mosques
+            {"name": "Edappal Juma Masjid", "type": "Mosque", "latitude": 10.8284, "longitude": 75.9952},
+            {"name": "Kunnamkulam Juma Masjid", "type": "Mosque", "latitude": 10.6501, "longitude": 76.0668},
+
+            # Temples
+            {"name": "Thrissur Vadakkumnathan Temple", "type": "Temple", "latitude": 10.5276, "longitude": 76.2144},
+            {"name": "Kunnamkulam Sree Krishna Temple", "type": "Temple", "latitude": 10.6503, "longitude": 76.0670},
+        ]
+
+        for p in places:
+            loc = Location(name=p["name"], type=p["type"], latitude=p["latitude"], longitude=p["longitude"])
+            db.session.add(loc)
+
+        db.session.commit()
+        print(f"✅ Finished seeding. Total entries added: {len(places)}")
 
 if __name__ == "__main__":
     seed_database()
