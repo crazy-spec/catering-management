@@ -5,15 +5,17 @@ from app import app
 CENTER_LAT, CENTER_LON = 10.8283, 75.9951  # Edappal
 RADIUS = 30000  # 30 km
 
-# Simple query: villages only
-query = f"""
-[out:json][timeout:60];
-node["place"="village"](around:{RADIUS},{CENTER_LAT},{CENTER_LON});
-out body;
-"""
+# Start with villages only
+queries = {
+    "Villages": f"""
+    [out:json][timeout:60];
+    node["place"="village"](around:{RADIUS},{CENTER_LAT},{CENTER_LON});
+    out body;
+    """
+}
 
 def fetch_places(query):
-    # Use Kumi Overpass mirror (more reliable)
+    # Use a more reliable Overpass mirror
     url = "https://overpass.kumi.systems/api/interpreter"
     response = requests.post(url, data={"data": query})
     print("Status:", response.status_code)
@@ -31,15 +33,20 @@ def fetch_places(query):
 def seed_database():
     with app.app_context():
         db.create_all()
-        places = fetch_places(query)
-        for p in places:
-            name = p.get("tags", {}).get("name", "Unnamed Village")
-            lat = p["lat"]
-            lon = p["lon"]
-            loc = Location(name=name, type="Village", latitude=lat, longitude=lon)
-            db.session.add(loc)
-        db.session.commit()
-        print(f"✅ Finished seeding. Total entries added: {len(places)}")
+        total = 0
+        for category, q in queries.items():
+            print(f"Fetching {category}...")
+            places = fetch_places(q)
+            for p in places:
+                name = p.get("tags", {}).get("name", "Unnamed Place")
+                lat = p["lat"]
+                lon = p["lon"]
+                loc = Location(name=name, type=category, latitude=lat, longitude=lon)
+                db.session.add(loc)
+            db.session.commit()
+            total += len(places)
+            print(f"Seeded {len(places)} {category} entries.")
+        print(f"✅ Finished seeding. Total entries added: {total}")
 
 if __name__ == "__main__":
     seed_database()
