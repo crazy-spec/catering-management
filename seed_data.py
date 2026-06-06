@@ -92,17 +92,26 @@ def seed_database():
         {"name": "Cherpulassery Convention Centre", "type": "Auditorium", "latitude": 10.8834, "longitude": 76.3168},
         {"name": "Pattambi Town Hall", "type": "Auditorium", "latitude": 10.8001, "longitude": 76.2001},
 
-            # Mosques
-            {"name": "Edappal Juma Masjid", "type": "Mosque", "latitude": 10.8284, "longitude": 75.9952},
-            {"name": "Kunnamkulam Juma Masjid", "type": "Mosque", "latitude": 10.6501, "longitude": 76.0668},
-            {"name": "Ponnani Juma Masjid", "type": "Mosque", "latitude": 10.7834, "longitude": 75.9168},
-            {"name": "Valanchery Juma Masjid", "type": "Mosque", "latitude": 10.8835, "longitude": 76.0669},
-            {"name": "Thrissur Juma Masjid", "type": "Mosque", "latitude": 10.5279, "longitude": 76.2147},
-            {"name": "Palakkad Juma Masjid", "type": "Mosque", "latitude": 10.7862, "longitude": 76.6550},
-            {"name": "Ottapalam Masjid", "type": "Mosque", "latitude": 10.7669, "longitude": 76.3835},
-            {"name": "Shoranur Masjid", "type": "Mosque", "latitude": 10.7668, "longitude": 76.2834},
-            {"name": "Chittur Masjid", "type": "Mosque", "latitude": 10.7001, "longitude": 76.7501},
-            {"name": "Alathur Masjid", "type": "Mosque", "latitude": 10.6501, "longitude": 76.6334},
+        # Mosques
+        {"name": "Edappal Juma Masjid", "type": "Mosque", "latitude": 10.8284, "longitude": 75.9952},
+        {"name": "Kunnamkulam Juma Masjid", "type": "Mosque", "latitude": 10.6501, "longitude": 76.0668},
+        {"name": "Ponnani Juma Masjid", "type": "Mosque", "latitude": 10.7834, "longitude": 75.9168},
+        {"name": "Valanchery Juma Masjid", "type": "Mosque", "latitude": 10.8835, "longitude": 76.0669},
+        {"name": "Thrissur Juma Masjid", "type": "Mosque", "latitude": 10.5279, "longitude": 76.2147},
+        {"name": "Palakkad Juma Masjid", "type": "Mosque", "latitude": 10.7862, "longitude": 76.6550},
+        {"name": "Ottapalam Masjid", "type": "Mosque", "latitude": 10.7669, "longitude": 76.3835},
+        {"name": "Shoranur Masjid", "type": "Mosque", "latitude": 10.7668, "longitude": 76.2834},
+        {"name": "Chittur Masjid", "type": "Mosque", "latitude": 10.7001, "longitude": 76.7501},
+        {"name": "Alathur Masjid", "type": "Mosque", "latitude": 10.6501, "longitude": 76.6334},
+        {"name": "Mannarkkad Masjid", "type": "Mosque", "latitude": 10.9834, "longitude": 76.4668},
+        {"name": "Nilambur Masjid", "type": "Mosque", "latitude": 11.2834, "longitude": 76.2334},
+        {"name": "Tirur Masjid", "type": "Mosque", "latitude": 10.9168, "longitude": 75.9168},
+        {"name": "Tanur Masjid", "type": "Mosque", "latitude": 10.9834, "longitude": 75.8668},
+        {"name": "Kottakkal Masjid", "type": "Mosque", "latitude": 10.9501, "longitude": 76.0001},
+        {"name": "Parappanangadi Masjid", "type": "Mosque", "latitude": 11.0501, "longitude": 75.9168},
+        {"name": "Feroke Masjid", "type": "Mosque", "latitude": 11.1834, "longitude": 75.8334},
+        {"name": "Ramanattukara Masjid", "type": "Mosque", "latitude": 11.2001, "longitude": 75.8668},
+        {"name": "Kunnamangalam Masjid", "type": "Mosque", "latitude": 11.3001, "longitude": 75.8668},
             # … continue until 20+ mosques
 
             # Temples
