@@ -6,7 +6,7 @@ def seed_database():
         db.create_all()
 
         places = [
-            # Villages & Towns
+            # Villages & Towns (sample of 50+)
             {"name": "Edappal", "type": "Village", "latitude": 10.8283, "longitude": 75.9951},
             {"name": "Kunnamkulam", "type": "Town", "latitude": 10.6500, "longitude": 76.0667},
             {"name": "Perumpilav", "type": "Village", "latitude": 10.7167, "longitude": 76.0333},
@@ -16,30 +16,47 @@ def seed_database():
             {"name": "Valanchery", "type": "Town", "latitude": 10.8833, "longitude": 76.0667},
             {"name": "Kuttippuram", "type": "Village", "latitude": 10.8333, "longitude": 76.0667},
             {"name": "Vattamkulam", "type": "Village", "latitude": 10.8167, "longitude": 76.0333},
+            {"name": "Koottanad", "type": "Village", "latitude": 10.7500, "longitude": 76.0833},
+            {"name": "Pazhanji", "type": "Village", "latitude": 10.6833, "longitude": 76.0333},
+            {"name": "Peringottukara", "type": "Village", "latitude": 10.5000, "longitude": 76.1500},
+            {"name": "Cheruthuruthy", "type": "Village", "latitude": 10.6833, "longitude": 76.2667},
+            {"name": "Guruvayur", "type": "Town", "latitude": 10.6000, "longitude": 76.0333},
+            {"name": "Kozhikode", "type": "City", "latitude": 11.2588, "longitude": 75.7804},
+            # … (continue adding until 50+ villages/towns)
 
-            # Auditoriums / Wedding Venues
+            # Auditoriums / Wedding Venues (20+)
             {"name": "Shifa Convention Center", "type": "Auditorium", "latitude": 10.8285, "longitude": 75.9955},
             {"name": "Town Hall Kunnamkulam", "type": "Auditorium", "latitude": 10.6502, "longitude": 76.0669},
             {"name": "Perumpilav Auditorium", "type": "Auditorium", "latitude": 10.7168, "longitude": 76.0334},
             {"name": "Valanchery Convention Centre", "type": "Auditorium", "latitude": 10.8834, "longitude": 76.0668},
             {"name": "Thrissur Jubilee Hall", "type": "Auditorium", "latitude": 10.5277, "longitude": 76.2145},
+            {"name": "Ponnani Wedding Hall", "type": "Auditorium", "latitude": 10.7835, "longitude": 75.9169},
+            {"name": "Kozhikode Town Hall", "type": "Auditorium", "latitude": 11.2589, "longitude": 75.7805},
+            # … (continue adding until 20+ auditoriums)
 
-            # Mosques
+            # Mosques (15+)
             {"name": "Edappal Juma Masjid", "type": "Mosque", "latitude": 10.8284, "longitude": 75.9952},
             {"name": "Kunnamkulam Juma Masjid", "type": "Mosque", "latitude": 10.6501, "longitude": 76.0668},
             {"name": "Ponnani Juma Masjid", "type": "Mosque", "latitude": 10.7834, "longitude": 75.9168},
             {"name": "Valanchery Juma Masjid", "type": "Mosque", "latitude": 10.8835, "longitude": 76.0669},
+            {"name": "Thrissur Juma Masjid", "type": "Mosque", "latitude": 10.5279, "longitude": 76.2147},
+            # … (continue adding until 15+ mosques)
 
-            # Temples
+            # Temples (15+)
             {"name": "Thrissur Vadakkumnathan Temple", "type": "Temple", "latitude": 10.5276, "longitude": 76.2144},
             {"name": "Kunnamkulam Sree Krishna Temple", "type": "Temple", "latitude": 10.6503, "longitude": 76.0670},
             {"name": "Edappal Bhagavathi Temple", "type": "Temple", "latitude": 10.8286, "longitude": 75.9956},
             {"name": "Perumpilav Shiva Temple", "type": "Temple", "latitude": 10.7169, "longitude": 76.0335},
+            {"name": "Guruvayur Temple", "type": "Temple", "latitude": 10.6001, "longitude": 76.0334},
+            # … (continue adding until 15+ temples)
 
-            # Schools
+            # Schools (10+)
             {"name": "Edappal Higher Secondary School", "type": "School", "latitude": 10.8287, "longitude": 75.9957},
             {"name": "Kunnamkulam Govt. High School", "type": "School", "latitude": 10.6504, "longitude": 76.0671},
             {"name": "Thrissur Model School", "type": "School", "latitude": 10.5278, "longitude": 76.2146},
+            {"name": "Ponnani Public School", "type": "School", "latitude": 10.7836, "longitude": 75.9170},
+            {"name": "Valanchery English School", "type": "School", "latitude": 10.8836, "longitude": 76.0670},
+            # … (continue adding until 10+ schools)
         ]
 
         for p in places:
